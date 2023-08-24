@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="miniproject.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Password Generator</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>Password Generator</h1>
+
+        <div class="container">
+
+            <div class="display-container">
+                <input placeholder="Password" readonly class="display" data-passwordDisplay>
+
+                 <button data-copy>
+                <!-- image data copy wali*/ -->
+
+                    <span data-copyMsg></span>
+                    <i class="fa-solid fa-copy"></i>
+                    <!-- <img src="/img/copy.png" alt="img" style="background-color: yellow;" width="23px" height="23px"> -->
+                </button> 
+
+            </div>
+
+            <div class="input-container">
+
+                <!-- Password legnth section -->
+                <div class="length-container">
+                    <p>Password Length</p>
+                    <p data-lengthNumber>0</p>
+                </div>
+
+                <!-- slider  -->
+
+                <input  type="range" min="1" max="20" step="1" class="slider" data-lengthSlider>
+
+                <!-- checkbox section -->
+
+                <div class="checkbox">
+                    <input type="checkbox" id="uppercase">
+                    <label for="uppercase">Includes UpperCase Letters</label>
+                </div>
+
+                <div class="checkbox">
+                    <input type="checkbox" id="lowercase">
+                    <label for="lowercase">Includes Lowercase Letters</label>
+                </div>
+
+                <div class="checkbox">
+                    <input type="checkbox" id="numbers">
+                    <label for="numbers">Includes Numbers</label>
+                </div>
+
+                <div class="checkbox">
+                    <input type="checkbox" id="symbols">
+                    <label for="symbols">Includes Symbol</label>
+                </div>
+
+                <!-- Strength section -->
+
+                <div class="strength-container">
+                    <p>Strength</p>
+                    <div data-indicator></div>
+                </div>
+
+                <!-- Button -->
+            </div>
+            
+            
+            
+            
+            
+            <button class="generatebtn">Generate Password</button>
+            <button class="resetbtn">Reset </button>
+
+        </div>
+
+        <script src="miniproject.js"></script>
+</body>
+
+</html>
